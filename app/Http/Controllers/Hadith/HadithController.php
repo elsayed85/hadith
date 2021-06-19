@@ -20,5 +20,6 @@ class HadithController extends Controller
             SEOMeta::setDescription("من كتاب {$hadith->book->name} , {$hadith->description}");
         }
         return view('hadith.show', ['hadith' => $hadith]);
+        
     }
 }
