@@ -13,7 +13,7 @@ class SiteController extends Controller
     public function index()
     {
         SEOMeta::setTitle('الرئيسية');
-        $books = Book::latest()->withCount(['hadiths'])->paginate(6);
+        $books = Book::latest()->withCount(['hadiths'])->get();
         return view('index', ['books' => $books]);
     }
 
